@@ -4,7 +4,7 @@
   tasks:
     - name: Copy index.html to Apache root directory
       copy:
-        src: /var/lib/jenkins/workspace/DEPLOIEMENT ANSIBLE/index.html  # Chemin local vers votre index.html
+        src: /var/lib/jenkins/workspace/DEPLOIEMENTANSIBLE/index.html  # Chemin local vers votre index.html
         dest: /var/www/jason.com/index.html # Chemin sur le serveur Apache2 où l'index doit être copié
       notify:
         - Restart Apache
