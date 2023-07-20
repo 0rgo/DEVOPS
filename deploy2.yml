@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: WEB
   become: true
   tasks:
     - name: Copy index.html to Apache root directory
