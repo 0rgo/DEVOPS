@@ -1,0 +1,16 @@
+---
+- hosts: 192.168.154.137
+  become: true
+  tasks:
+    - name: Copy index.html to Apache root directory
+      copy:
+        src: /var/lib/jenkins/workspace/DEPLOIEMENT ANSIBLE/index.html  # Chemin local vers votre index.html
+        dest: /var/www/jason.com/index.html # Chemin sur le serveur Apache2 où l'index doit être copié
+      notify:
+        - Restart Apache
+
+  handlers:
+    - name: Restart Apache
+      service:
+        name: apache2
+        state: restarted
