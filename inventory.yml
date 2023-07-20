@@ -1,0 +1,4 @@
+all:
+  hosts:
+    WEB:
+      ansible_host: 192.168.154.137 # Remplacez cette adresse IP par l'adresse de votre serveur web
