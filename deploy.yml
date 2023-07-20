@@ -1,0 +1,12 @@
+---
+- hosts: 192.168.154.137
+  become: true
+  vars:
+    repo_url: "https://github.com/0rgo/DEVOPS.git"
+    repo_dest: "/var/www/jason.com"  # Dossier de destination sur le serveur
+
+  tasks:
+    - name: Clone the GitHub repository
+      git:
+        repo: "{{ repo_url }}"
+        dest: "{{ repo_dest }}"
